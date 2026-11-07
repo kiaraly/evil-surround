@@ -274,7 +274,7 @@ This overlay excludes the delimeters."
           (setq inner (funcall inner-obj)))))
     (when (evil-range-p inner)
       (when (eq (char-syntax char) ?\()
-        (evil-surround-trim-whitespace-from-range inner "[[:space:]]"))
+        (evil-surround-trim-whitespace-from-range inner))
       (make-overlay (evil-range-beginning inner)
                     (evil-range-end inner)
                     nil nil t))))
